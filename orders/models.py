@@ -22,6 +22,6 @@ class Order(models.Model):
     def __str__(self):
         return f"{self.costumer_email} - {self.food.name} + {self.drink.name}"
     
+    @property
     def price(self):
         return self.food.price + self.drink.price
-    price.short_description = 'Total Price'
